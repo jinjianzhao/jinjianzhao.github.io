@@ -1,0 +1,277 @@
+:root {
+  color-scheme: light;
+  --ink: #25313d;
+  --muted: #6b7680;
+  --blue: #245b85;
+  --line: #e4e9ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: #dceaf5;
+}
+
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  padding: 8px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 1040px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 80px 44px 26px;
+}
+
+.intro {
+  padding: 14px 0 57px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  color: #243b4e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+
+.bio {
+  margin: 0;
+  color: #55616d;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.bio strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0;
+  color: #293a49;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.35px;
+}
+
+.year {
+  color: var(--muted);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: 324px minmax(0, 1fr);
+  align-items: start;
+  gap: 32px;
+  padding-top: 30px;
+}
+
+.paper-image {
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.paper-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1744 / 1092;
+  object-fit: contain;
+}
+
+h3 {
+  margin: -4px 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+.authors {
+  margin: 0 0 11px;
+  color: #56616d;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.authors strong {
+  font-weight: 600;
+}
+
+sup {
+  position: relative;
+  top: -0.15em;
+  font-size: 0.72em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.venue {
+  margin: 0;
+  color: #3f5262;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.paper-links {
+  margin: 6px 0 0;
+}
+
+.paper-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contribution {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 110px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 1600px) {
+  .page {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 850px) {
+  .page {
+    padding: 60px 32px 24px;
+  }
+
+  .publication {
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 44px 24px 24px;
+  }
+
+  .intro {
+    padding: 0 0 41px;
+  }
+
+  h1 {
+    margin-bottom: 14px;
+    font-size: 38px;
+    letter-spacing: -0.8px;
+  }
+
+  .bio {
+    font-size: 17px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .publication {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 23px;
+    padding-top: 25px;
+  }
+
+  .paper-image {
+    max-width: 420px;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+  }
+
+  footer {
+    padding-top: 76px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
